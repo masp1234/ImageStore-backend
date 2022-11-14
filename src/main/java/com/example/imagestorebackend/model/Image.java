@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -15,9 +16,9 @@ public class Image {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private
+    private Date timeStamp;
 
-    @ManyToOne("images")
+    @ManyToOne
     private User user;
 
     private String filename;
