@@ -18,8 +18,8 @@ public class Image {
 
     private Date timeStamp;
 
-    @ManyToOne
-    private User user;
+   @ManyToOne
+   private UserDude user;
 
     private String filename;
 
