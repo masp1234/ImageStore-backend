@@ -1,4 +1,7 @@
 package com.example.imagestorebackend.repository;
 
-public interface UserRepository extends CrudRepository<User,Long> {
+import com.example.imagestorebackend.model.User;
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<User, Long> {
 }

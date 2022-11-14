@@ -2,7 +2,7 @@ package com.example.imagestorebackend.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.TypeAlias;
+
 
 import javax.persistence.*;
 import java.util.List;
