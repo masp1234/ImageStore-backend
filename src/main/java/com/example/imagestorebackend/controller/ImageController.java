@@ -5,6 +5,7 @@ import com.example.imagestorebackend.service.ImageService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -23,9 +24,9 @@ public class ImageController {
     public ResponseEntity<List<Image>> getAll() {
         return new ResponseEntity<>(imageService.getAllImages(), HttpStatus.OK);
     }
-    @PostMapping("/add/{userId}")
-    public ResponseEntity<Image> add(@RequestBody Image image,
+    @PostMapping(value = "/add/{userId}")
+    public ResponseEntity<Image> add(@RequestParam("image") MultipartFile file,
                                      @PathVariable("userId") Long userId) {
-        return new ResponseEntity<>(imageService.save(image, userId), HttpStatus.OK);
+        return new ResponseEntity<>(imageService.save(file, userId), HttpStatus.OK);
     }
 }

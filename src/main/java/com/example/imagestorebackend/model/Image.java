@@ -26,9 +26,9 @@ public class Image {
 
     private String filename;
 
-    private int originalByteSize;
+    private Long originalByteSize;
 
-    private int currentBiteSize;
+    private Long currentBiteSize;
 
     private String title;
 
@@ -37,8 +37,8 @@ public class Image {
     @Lob
     private String image;
 
-    public Image(Date timeStamp, User user, String filename, int originalByteSize, int currentBiteSize, String title, String description, String image) {
-        this.timeStamp = timeStamp;
+    public Image(User user, String filename, Long originalByteSize, Long currentBiteSize, String title, String description, String image) {
+        this.timeStamp = new Date();
         this.user = user;
         this.filename = filename;
         this.originalByteSize = originalByteSize;
