@@ -4,10 +4,7 @@ import com.example.imagestorebackend.model.Image;
 import com.example.imagestorebackend.service.ImageService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,10 @@ public class ImageController {
     @GetMapping("/all")
     public ResponseEntity<List<Image>> getAll() {
         return new ResponseEntity<>(imageService.getAllImages(), HttpStatus.OK);
+    }
+    @PostMapping("/add/{userId}")
+    public ResponseEntity<Image> add(@RequestBody Image image,
+                                     @PathVariable("userId") Long userId) {
+        return new ResponseEntity<>(imageService.save(image, userId), HttpStatus.OK);
     }
 }
