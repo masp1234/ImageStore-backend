@@ -32,8 +32,6 @@ public class ImageStoreBackendApplication {
             User user = new User("bobsen", "123123");
 
             Image image = new Image(
-                    new Date(),
-                    user,
                     "filename",
                     200,
                     350,

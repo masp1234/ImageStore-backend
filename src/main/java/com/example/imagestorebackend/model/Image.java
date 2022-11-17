@@ -37,9 +37,8 @@ public class Image {
     @Lob
     private String image;
 
-    public Image(Date timeStamp, User user, String filename, int originalByteSize, int currentBiteSize, String title, String description, String image) {
-        this.timeStamp = timeStamp;
-        this.user = user;
+    public Image(String filename, int originalByteSize, int currentBiteSize, String title, String description, String image) {
+        this.timeStamp = new Date();
         this.filename = filename;
         this.originalByteSize = originalByteSize;
         this.currentBiteSize = currentBiteSize;
