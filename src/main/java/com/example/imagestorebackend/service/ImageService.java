@@ -14,8 +14,9 @@ public class ImageService {
     private ImageRepository imageRepository;
     private UserRepository userRepository;
 
-    public ImageService(ImageRepository imageRepository) {
+    public ImageService(ImageRepository imageRepository, UserRepository userRepository) {
         this.imageRepository = imageRepository;
+        this.userRepository = userRepository;
     }
 
     public List<Image> getAllImages() {
