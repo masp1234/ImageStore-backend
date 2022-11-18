@@ -28,7 +28,7 @@ public class Image {
 
     private int originalByteSize;
 
-    private int currentBiteSize;
+    private int currentByteSize;
 
     private String title;
 
@@ -38,10 +38,9 @@ public class Image {
     private String image;
 
     public Image(String filename, int originalByteSize, int currentBiteSize, String title, String description, String image) {
-        this.timeStamp = new Date();
         this.filename = filename;
         this.originalByteSize = originalByteSize;
-        this.currentBiteSize = currentBiteSize;
+        this.currentByteSize = currentBiteSize;
         this.title = title;
         this.description = description;
         this.image = image;

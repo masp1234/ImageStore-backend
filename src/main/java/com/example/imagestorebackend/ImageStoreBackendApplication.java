@@ -31,16 +31,10 @@ public class ImageStoreBackendApplication {
 
             User user = new User("bobsen", "123123");
 
-            Image image = new Image(
-                    "filename",
-                    200,
-                    350,
-                    "et billede",
-                    "en billedbeskrivelse",
-                    "dsffdfjgfdjgjdf23u823435jejgnjrngjgnjrgnjfdsfdsfsdf");
+
 
             userRepository.save(user);
-            imageRepository.save(image);
+
 
 
 
