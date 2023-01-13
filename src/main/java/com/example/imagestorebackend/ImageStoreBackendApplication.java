@@ -34,6 +34,7 @@ public class ImageStoreBackendApplication {
 
 
             userRepository.save(user);
+            System.out.println("hello");
 
 
 
